@@ -11,6 +11,9 @@ npm install -g json-server
 ```
 npx json-server db.json
 ```
+#### rename local.env file
+rename local.env to .env
+
 #### start test 
 ```
 npm run test
