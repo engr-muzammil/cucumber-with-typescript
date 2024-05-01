@@ -1,0 +1,25 @@
+{
+  "name": "cucumber-with-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js -f json:cucumber.json __component-tests__/features/ -r __component-tests__/step-definitions/ --parallel 3 && node ./report.js",
+    "directory-service": "./node_modules/.bin/cucumber-js -f json:cucumber.json __component-tests__/features/ -r __component-tests__/step-definitions/",
+    "report": "node ./report.js",
+    "directory-service-bdd": "(yarn directory-service && yarn report) || yarn report"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "dotenv-flow": "^3.2.0",
+    "faker": "^5.1.0",
+    "json-server": "^0.17.4",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0"
+  }
+}
